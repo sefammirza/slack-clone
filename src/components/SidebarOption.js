@@ -5,13 +5,13 @@ import { db } from '../firebase'
 function SidebarOption({Icon, title, addChannelOption}) {
 
     const addChannel = () => {
-       /*  const channelName = prompt('Please enter the channel Name')
+        const channelName = prompt('Please enter the channel Name')
 
         if (channelName) {
             db.collection('rooms').add({
                 name:channelName,
             });
-        } */
+        }
     };
 
     const selectChannel = () => {
