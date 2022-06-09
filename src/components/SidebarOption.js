@@ -2,6 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import { db } from '../firebase'
 
+
+/* import { doc, setDoc } from "firebase/firestore"; 
+
+// Add a new document in collection "cities"
+await setDoc(doc(db, "cities", "LA"), {
+  name: "Los Angeles",
+  state: "CA",
+  country: "USA"
+});
+ */
+
 function SidebarOption({Icon, title, addChannelOption}) {
 
     const addChannel = () => {
