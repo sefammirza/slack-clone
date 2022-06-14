@@ -13,8 +13,14 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddIcon from '@mui/icons-material/Add';
+import { db } from '../firebase'
+import { collection } from "firebase/firestore";
 
 function Sidebar() {
+    /* const [channels, loading, error] = collection(db, "rooms") */
+    const channels = collection(db, "rooms") 
+    console.log(channels)
+
   return (
         <SidebarContainer>
             <SidebarHeader>
@@ -44,7 +50,9 @@ function Sidebar() {
             <hr/>
 
             <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel"/>
-
+            {/* {channels?.docs.map((doc) => (
+               <SidebarOption key={doc.id} id={doc.id} addChannelOption title={doc.data().name}/> 
+            ))} */}
         </SidebarContainer>
   )
 }

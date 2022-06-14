@@ -1,29 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 import { db } from '../firebase'
-
-
-/* import { doc, setDoc } from "firebase/firestore"; 
-
-// Add a new document in collection "cities"
-await setDoc(doc(db, "cities", "LA"), {
-  name: "Los Angeles",
-  state: "CA",
-  country: "USA"
-});
- */
+import { addDoc } from 'firebase/firestore'
+import { collection } from "firebase/firestore";
+/* import {useCollection} from "react-firebase-hooks/firestore" */
 
 function SidebarOption({Icon, title, addChannelOption}) {
 
+    /* const [channels, loading, error] = collection(db, "rooms") */
+    
+
     const addChannel = () => {
         const channelName = prompt('Please enter the channel Name')
-
         if (channelName) {
-            db.collection('rooms').add({
+        const usersCollectionRef =  collection(db, 'rooms')
+        addDoc(usersCollectionRef, {name:channelName})
+            /* db.collection('rooms').add({
                 name:channelName,
             });
+            console.log('channelName', channelName) */
         }
-    };
+       
+      
+       
+    }
 
     const selectChannel = () => {
 
