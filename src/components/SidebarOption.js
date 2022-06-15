@@ -2,10 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { db } from '../firebase'
 import { addDoc } from 'firebase/firestore'
-import { collection } from "firebase/firestore";
+import { collection } from "firebase/firestore"; 
+/* import { useDispatch } from 'react-redux'; */
+import { enterRoom } from '../features/appSlice';
 /* import {useCollection} from "react-firebase-hooks/firestore" */
 
-function SidebarOption({Icon, title, addChannelOption}) {
+function SidebarOption({Icon, title, addChannelOption, id}) {
+
+    /* const dispatch = useDispatch() */
+
+    
 
     /* const [channels, loading, error] = collection(db, "rooms") */
     
@@ -20,13 +26,14 @@ function SidebarOption({Icon, title, addChannelOption}) {
             });
             console.log('channelName', channelName) */
         }
-       
-      
-       
     }
 
     const selectChannel = () => {
-
+       /*  if (id){
+            dispatch(enterRoom({
+                roomId: id,
+            }))
+        } */
     }
 
   return (
@@ -66,6 +73,7 @@ cursor: pointer;
 }
 `
 
-const SidebarOptionChannel = styled.div`
-
+const SidebarOptionChannel = styled.h3`
+padding: 10px 0;
+font-weight: 300;
 `
