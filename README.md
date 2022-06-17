@@ -1,6 +1,9 @@
-# Slack Clone Reactjs 
-## [Demo](https://slack-clone-yt-f82dd.web.app/)
+# Slack Clone Reactjs
+
+## [Demo](https://slack-clone-4e9be.web.app)
+
 ### Topics
+
 - React Router
 - React Redux
 - React Firebase Hooks
@@ -8,5 +11,7 @@
 - Material UI
 - Firebase 9 Firestore Database
 - Deploy the app live on Firebase
+
 ### Chat Ekranı
+
 <img src="screen.png" />
